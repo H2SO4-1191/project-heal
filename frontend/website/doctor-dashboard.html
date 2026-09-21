@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Dashboard - MediCare</title>
+    <title>لوحة تحكم الطبيب - ميديكير</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -11,13 +11,13 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1 class="logo">MediCare</h1>
+                <h1 class="logo">ميديكير</h1>
             </div>
             <div class="nav-links">
-                <a href="doctor-dashboard.html" class="nav-link active">Today's Appointments</a>
+                <a href="doctor-dashboard.html" class="nav-link active">مواعيد اليوم</a>
                 <div class="user-section" id="userSection">
                     <span class="user-name" id="userName"></span>
-                    <button class="btn btn-outline" id="logoutBtn">Logout</button>
+                    <button class="btn btn-outline" id="logoutBtn">تسجيل الخروج</button>
                 </div>
             </div>
         </div>
@@ -25,34 +25,63 @@
 
     <main class="main-content">
         <div class="container">
-            <h2 class="page-title">Today's Appointments</h2>
+
+            <!-- إحصائيات الطبيب -->
+            <div class="stats-grid" id="doctorStatsGrid" style="margin-bottom: 32px;">
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-info">
+                        <h3 id="statAppointmentsThisMonth">—</h3>
+                        <p>مواعيد هذا الشهر</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3 id="statCompletedThisMonth">—</h3>
+                        <p>مكتملة هذا الشهر</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <h3 id="statUniquePatientsThisMonth">—</h3>
+                        <p>مرضى هذا الشهر</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏥</div>
+                    <div class="stat-info">
+                        <h3 id="statTotalAllTime">—</h3>
+                        <p>إجمالي المواعيد</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="page-title">مواعيد اليوم</h2>
             <p class="page-subtitle" id="todayDate"></p>
 
             <div class="loading" id="loading">
                 <div class="spinner"></div>
-                <p>Loading appointments...</p>
+                <p>جارٍ تحميل المواعيد...</p>
             </div>
 
-            <div class="appointments-list hidden" id="appointmentsList">
-                <!-- Appointments will be inserted here -->
-            </div>
+            <div class="appointments-list hidden" id="appointmentsList"></div>
 
             <div class="empty-state hidden" id="emptyState">
-                <p>No appointments scheduled for today.</p>
+                <p>لا توجد مواعيد مجدولة لليوم.</p>
             </div>
         </div>
     </main>
 
-    <!-- Modal for viewing and concluding appointments -->
+    <!-- نافذة عرض وإتمام المواعيد -->
     <div class="modal hidden" id="appointmentModal">
         <div class="modal-content modal-large">
             <div class="modal-header">
-                <h3>Appointment Details</h3>
+                <h3>تفاصيل الموعد</h3>
                 <button class="modal-close" id="modalClose">&times;</button>
             </div>
-            <div class="modal-body" id="modalBody">
-                <!-- Content will be inserted here -->
-            </div>
+            <div class="modal-body" id="modalBody"></div>
         </div>
     </div>
 

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Profile - MediCare</title>
+    <title>ملف الطبيب - ميديكير</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -11,17 +11,17 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1 class="logo">MediCare</h1>
+                <h1 class="logo">ميديكير</h1>
             </div>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Find Doctors</a>
-                <a href="my-appointments.html" class="nav-link">My Appointments</a>
+                <a href="index.html" class="nav-link">الأطباء</a>
+                <a href="my-appointments.html" class="nav-link">مواعيدي</a>
                 <div class="auth-section" id="authSection">
-                    <a href="auth.html" class="btn btn-outline">Login</a>
+                    <a href="auth.html" class="btn btn-outline">تسجيل الدخول</a>
                 </div>
                 <div class="user-section hidden" id="userSection">
                     <span class="user-name" id="userName"></span>
-                    <button class="btn btn-outline" id="logoutBtn">Logout</button>
+                    <button class="btn btn-outline" id="logoutBtn">تسجيل الخروج</button>
                 </div>
             </div>
         </div>
@@ -30,12 +30,12 @@
     <main class="main-content">
         <div class="container">
             <button class="btn btn-text back-btn" onclick="window.history.back()">
-                ← Back to doctors
+                → العودة إلى الأطباء
             </button>
 
             <div class="loading" id="loading">
                 <div class="spinner"></div>
-                <p>Loading doctor profile...</p>
+                <p>جارٍ تحميل ملف الطبيب...</p>
             </div>
 
             <div class="doctor-profile hidden" id="doctorProfile">
@@ -54,41 +54,37 @@
                 </div>
 
                 <div class="profile-about">
-                    <h3>About</h3>
+                    <h3>نبذة عن الطبيب</h3>
                     <p id="doctorAbout"></p>
                 </div>
 
                 <div class="profile-availability">
-                    <h3>Availability</h3>
-                    <div class="availability-list" id="availabilityList">
-                        <!-- Availability will be inserted here -->
-                    </div>
+                    <h3>أوقات العمل</h3>
+                    <div class="availability-list" id="availabilityList"></div>
                 </div>
 
                 <div class="booking-section">
-                    <h3>Book an Appointment</h3>
+                    <h3>احجز موعداً</h3>
                     <div class="booking-form">
                         <div class="form-group">
-                            <label for="appointmentDate">Select Date & Time</label>
+                            <label for="appointmentDate">اختر التاريخ والوقت</label>
                             <input type="datetime-local" id="appointmentDate" class="form-input">
                         </div>
-                        <button class="btn btn-primary btn-large" id="bookAppointmentBtn">Book Appointment</button>
+                        <button class="btn btn-primary btn-large" id="bookAppointmentBtn">احجز موعداً</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Modal for booking confirmation/login prompt -->
+    <!-- نافذة تأكيد الحجز / تسجيل الدخول -->
     <div class="modal hidden" id="bookingModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="modalTitle">Confirm Booking</h3>
+                <h3 id="modalTitle">تأكيد الحجز</h3>
                 <button class="modal-close" id="modalClose">&times;</button>
             </div>
-            <div class="modal-body" id="modalBody">
-                <!-- Content will be inserted here -->
-            </div>
+            <div class="modal-body" id="modalBody"></div>
         </div>
     </div>
 

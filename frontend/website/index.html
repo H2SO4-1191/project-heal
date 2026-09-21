@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediCare - Find Your Doctor</title>
+    <title>ميديكير - ابحث عن طبيبك</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -11,17 +11,17 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1 class="logo">MediCare</h1>
+                <h1 class="logo">ميديكير</h1>
             </div>
             <div class="nav-links">
-                <a href="index.html" class="nav-link active">Find Doctors</a>
-                <a href="my-appointments.html" class="nav-link" id="myAppointmentsLink">My Appointments</a>
+                <a href="index.html" class="nav-link active">الأطباء</a>
+                <a href="my-appointments.html" class="nav-link" id="myAppointmentsLink">مواعيدي</a>
                 <div class="auth-section" id="authSection">
-                    <a href="auth.html" class="btn btn-outline">Login</a>
+                    <a href="auth.html" class="btn btn-outline">تسجيل الدخول</a>
                 </div>
                 <div class="user-section hidden" id="userSection">
                     <span class="user-name" id="userName"></span>
-                    <button class="btn btn-outline" id="logoutBtn">Logout</button>
+                    <button class="btn btn-outline" id="logoutBtn">تسجيل الخروج</button>
                 </div>
             </div>
         </div>
@@ -30,8 +30,8 @@
     <header class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2 class="hero-title">Find the right doctor,<br>for the right care</h2>
-                <p class="hero-subtitle">Browse our network of experienced healthcare professionals</p>
+                <h2 class="hero-title">ابحث عن الطبيب المناسب،<br>للرعاية الصحية المثالية</h2>
+                <p class="hero-subtitle">تصفّح شبكتنا من أمهر المتخصصين في الرعاية الصحية</p>
             </div>
         </div>
     </header>
@@ -40,26 +40,24 @@
         <div class="container">
             <div class="filters-section">
                 <div class="search-box">
-                    <input type="text" id="nameFilter" placeholder="Search by doctor name..." class="search-input">
+                    <input type="text" id="nameFilter" placeholder="ابحث باسم الطبيب..." class="search-input">
                 </div>
                 <div class="search-box">
-                    <input type="text" id="specialtyFilter" placeholder="Search by specialty..." class="search-input">
+                    <input type="text" id="specialtyFilter" placeholder="ابحث بالتخصص..." class="search-input">
                 </div>
-                <button class="btn btn-primary" id="searchBtn">Search</button>
-                <button class="btn btn-secondary" id="clearBtn">Clear Filters</button>
+                <button class="btn btn-primary" id="searchBtn">بحث</button>
+                <button class="btn btn-secondary" id="clearBtn">مسح الفلاتر</button>
             </div>
 
-            <div class="doctors-grid" id="doctorsGrid">
-                <!-- Doctor cards will be inserted here -->
-            </div>
+            <div class="doctors-grid" id="doctorsGrid"></div>
 
             <div class="loading hidden" id="loading">
                 <div class="spinner"></div>
-                <p>Loading doctors...</p>
+                <p>جارٍ تحميل الأطباء...</p>
             </div>
 
             <div class="empty-state hidden" id="emptyState">
-                <p>No doctors found matching your criteria.</p>
+                <p>لا يوجد أطباء مطابقون لمعايير بحثك.</p>
             </div>
         </div>
     </main>

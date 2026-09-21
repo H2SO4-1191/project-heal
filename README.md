@@ -14,10 +14,15 @@ Project Heal is a full-stack website designed to help medical organizations mana
 - Role-based access and permissions
 - Built with a clean and responsive user interface
 
+## Screenshots
+
+<img src="./screenshots/home.jpg" alt="home" width="780"/>
+<img src="./screenshots/doctors.jpg" alt="doctors" width="780"/>
+
 ## Tech Stack
 
 - Backend: Django, Python, PostgreSQL
-- Frontend: HTML, CSS, JavaScript (or React if used)
+- Frontend: HTML, CSS, JavaScript
 - Deployment: Docker, Nginx, Linux
 - Authentication and API: JWT / Secure auth
 

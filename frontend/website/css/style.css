@@ -1,3 +1,46 @@
+/* Arabic Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap');
+
+/* RTL Overrides */
+html[dir="rtl"] body { font-family: 'Tajawal', sans-serif; }
+
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3,
+html[dir="rtl"] h4, html[dir="rtl"] h5, html[dir="rtl"] h6,
+html[dir="rtl"] .logo, html[dir="rtl"] .btn, html[dir="rtl"] .nav-link,
+html[dir="rtl"] .auth-tab, html[dir="rtl"] .admin-tab,
+html[dir="rtl"] .availability-day, html[dir="rtl"] .user-name,
+html[dir="rtl"] .appointment-status, html[dir="rtl"] .data-table th {
+    font-family: 'Cairo', sans-serif;
+}
+
+html[dir="rtl"] .form-group label,
+html[dir="rtl"] .search-input,
+html[dir="rtl"] .form-input,
+html[dir="rtl"] .form-input-small {
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* Flip directional borders */
+html[dir="rtl"] .availability-item {
+    border-left: none;
+    border-right: 4px solid var(--primary);
+}
+
+/* Flip table alignment */
+html[dir="rtl"] .data-table th,
+html[dir="rtl"] .data-table td { text-align: right; }
+
+/* Flip hover slide direction */
+html[dir="rtl"] .appointment-card:hover { transform: translateX(-4px); }
+
+/* Align inputs right */
+html[dir="rtl"] .form-input,
+html[dir="rtl"] .form-input-small,
+html[dir="rtl"] .search-input { text-align: right; }
+
+/* Form row direction */
+html[dir="rtl"] .form-row { direction: rtl; }
+
 :root {
     --primary: #0A5C5F;
     --primary-dark: #084547;

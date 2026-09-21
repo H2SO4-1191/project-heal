@@ -1,23 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login / Signup - MediCare</title>
+    <title>تسجيل الدخول / إنشاء حساب - ميديكير</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Crimson+Pro:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
   </head>
   <body>
     <nav class="navbar">
       <div class="container">
         <div class="nav-brand">
-          <h1 class="logo">MediCare</h1>
+          <h1 class="logo">ميديكير</h1>
         </div>
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Find Doctors</a>
+          <a href="index.html" class="nav-link">الأطباء</a>
         </div>
       </div>
     </nav>
@@ -25,107 +22,78 @@
     <main class="auth-main">
       <div class="auth-container">
         <div class="auth-tabs">
-          <button class="auth-tab active" id="loginTab">Login</button>
-          <button class="auth-tab" id="signupTab">Sign Up</button>
+          <button class="auth-tab active" id="loginTab">تسجيل الدخول</button>
+          <button class="auth-tab" id="signupTab">إنشاء حساب</button>
         </div>
 
-        <!-- Login Form -->
+        <!-- نموذج تسجيل الدخول -->
         <div class="auth-form" id="loginForm">
-          <h2 class="auth-title">Welcome Back</h2>
-          <p class="auth-subtitle">
-            Enter your email to receive a one-time password
-          </p>
+          <h2 class="auth-title">أهلاً بعودتك</h2>
+          <p class="auth-subtitle">أدخل بريدك الإلكتروني لاستلام رمز تحقق</p>
 
           <form id="loginFormElement">
             <div class="form-group">
-              <label for="loginEmail">Email Address</label>
+              <label for="loginEmail">البريد الإلكتروني</label>
               <input type="email" id="loginEmail" class="form-input" required />
             </div>
 
             <div class="otp-section hidden" id="loginOtpSection">
               <div class="form-group">
-                <label for="loginOtp">Enter OTP</label>
-                <input
-                  type="text"
-                  id="loginOtp"
-                  class="form-input"
-                  maxlength="6"
-                  placeholder="000000"
-                />
+                <label for="loginOtp">أدخل رمز التحقق</label>
+                <input type="text" id="loginOtp" class="form-input" maxlength="6" placeholder="000000" />
               </div>
-              <p class="otp-info">Check your console for the OTP code</p>
+              <p class="otp-info">تحقق من وحدة التحكم للحصول على رمز التحقق</p>
             </div>
 
-            <button
-              type="submit"
-              class="btn btn-primary btn-large"
-              id="loginSubmitBtn"
-            >
-              Request OTP
+            <button type="submit" class="btn btn-primary btn-large" id="loginSubmitBtn">
+              طلب رمز التحقق
             </button>
           </form>
         </div>
 
-        <!-- Signup Form -->
+        <!-- نموذج إنشاء الحساب -->
         <div class="auth-form hidden" id="signupForm">
-          <h2 class="auth-title">Create Account</h2>
-          <p class="auth-subtitle">Register as a patient</p>
+          <h2 class="auth-title">إنشاء حساب جديد</h2>
+          <p class="auth-subtitle">سجّل كمريض</p>
 
           <form id="signupFormElement">
             <div class="form-group">
-              <label for="signupEmail">Email Address</label>
-              <input
-                type="email"
-                id="signupEmail"
-                class="form-input"
-                required
-              />
+              <label for="signupEmail">البريد الإلكتروني</label>
+              <input type="email" id="signupEmail" class="form-input" required />
             </div>
 
             <div class="form-group">
-              <label for="signupName">Full Name</label>
+              <label for="signupName">الاسم الكامل</label>
               <input type="text" id="signupName" class="form-input" required />
             </div>
 
             <div class="form-group">
-              <label for="signupPhone">Phone Number</label>
+              <label for="signupPhone">رقم الهاتف</label>
               <input type="tel" id="signupPhone" class="form-input" required />
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="signupBirth">Date of Birth</label>
-                <input
-                  type="date"
-                  id="signupBirth"
-                  class="form-input"
-                  required
-                />
+                <label for="signupBirth">تاريخ الميلاد</label>
+                <input type="date" id="signupBirth" class="form-input" required />
               </div>
 
               <div class="form-group">
-                <label for="signupGender">Gender</label>
+                <label for="signupGender">الجنس</label>
                 <select id="signupGender" class="form-input" required>
-                  <option value="">Select...</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
+                  <option value="">اختر...</option>
+                  <option value="male">ذكر</option>
+                  <option value="female">أنثى</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="signupDiseases">Chronic Diseases (Optional)</label>
-              <textarea
-                id="signupDiseases"
-                class="form-input"
-                rows="3"
-                placeholder="e.g., Diabetes, Hypertension"
-              ></textarea>
+              <label for="signupDiseases">الأمراض المزمنة (اختياري)</label>
+              <textarea id="signupDiseases" class="form-input" rows="3" placeholder="مثال: السكري، ضغط الدم"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-large">
-              Create Account
-            </button>
+            <button type="submit" class="btn btn-primary btn-large">إنشاء حساب</button>
           </form>
         </div>
 
